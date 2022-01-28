@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Dongle:wght@300&display=swap');
+/*font-family: 'Dongle', sans-serif;*/
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+*, *::after, *::before {
+  font-family: 'Dongle', sans-serif;
+}
