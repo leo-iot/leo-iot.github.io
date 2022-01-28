@@ -1,13 +1,13 @@
 <template>
-  <InProgress />
+  <MainPage />
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
-import InProgress from "~/components/InProgress.vue";
+import MainPage from "~/components/MainPage.vue";
 
 export default Vue.extend({
   name: 'IndexPage',
-  components: {InProgress},
+  components: {MainPage},
 })
 </script>
