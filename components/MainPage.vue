@@ -1,9 +1,6 @@
 <template>
-  <div id="container">
-    <p>{{ text }}</p>
-    <div v-if="content">
-      <nuxt-content :document="content"/>
-    </div>
+  <div id="main-page">
+    <Navigation/>
   </div>
 </template>
 
@@ -13,7 +10,6 @@ import {Component} from "vue-property-decorator";
 
 @Component
 export default class MainPage extends Vue{
-  text: string = "something"
   content: any = {}
 
   async created() {
@@ -25,8 +21,8 @@ export default class MainPage extends Vue{
 </script>
 
 <style scoped>
-#container {
-  width: 100vh;
+#main-page {
+  width: 100vw;
   height: 100vh;
 }
 </style>
