@@ -1,26 +1,27 @@
 <template>
   <div id="container">
-    <p>hello world</p>
     <p>{{ text }}</p>
+    <div v-if="content">
+      <nuxt-content :document="content"/>
+    </div>
   </div>
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
-import {Context} from "@nuxt/types";
+import {Component} from "vue-property-decorator";
 
-export default Vue.extend({
-  asyncData(_: Context): Promise<object | void> | object | void {
-    return {
-      text: "something"
-    }
-  },
-  data() {
-    return {
-      title: 'Some Title'
-    }
-  },
-})
+@Component
+export default class MainPage extends Vue{
+  text: string = "something"
+  content: any = {}
+
+  async created() {
+    this.content = await this.$nuxt
+      .context.$content('index').fetch()
+  }
+
+}
 </script>
 
 <style scoped>
