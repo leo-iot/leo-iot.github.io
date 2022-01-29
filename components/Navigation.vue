@@ -16,7 +16,7 @@
 <script lang="ts">
 
 import {Component, Vue} from "vue-property-decorator";
-import NavigationData from "~/src/content-typings/NavigationData";
+import NavigationData from "~/src/typings/NavigationData";
 
 @Component
 export default class Navigation extends Vue{
