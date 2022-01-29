@@ -1,5 +1,4 @@
 <template>
-<!--  <nuxt-content :document="doc"></nuxt-content>-->
   <MainPage/>
 </template>
 
