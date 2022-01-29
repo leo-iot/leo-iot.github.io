@@ -39,7 +39,7 @@ node_modules/
 jspm_packages/
 
 # TypeScript v1 declaration files
-src/
+# src/
 
 # Optional npm cache directory
 .npm
