@@ -1,14 +1,17 @@
 <template>
   <div id="main-page">
     <Navigation/>
+    <HomeSegment/>
   </div>
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
 import {Component} from "vue-property-decorator";
-
-@Component
+import HomeSegment from "~/components/HomeSegment.vue";
+@Component({
+  components: {HomeSegment}
+})
 export default class MainPage extends Vue{
   content: any = {}
 
