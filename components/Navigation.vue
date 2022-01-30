@@ -2,12 +2,15 @@
   <div v-if="navigationData !== null" id="navigation" >
     <nav>
       <div id="home">
-        <img :src="require(`~/assets/logo.png`)"  alt="Logo">
+        <NavigationEntry
+          :data="navigationData.home"/>
       </div>
       <div id="navigation-entries">
-        <div v-for="navigationEntry in navigationData.entries" :key="navigationEntry.text" class="navigation-entry">
-           {{ navigationEntry.text }}
-        </div>
+        <NavigationEntry
+          v-for="(navigationEntry, index) in navigationData.entries"
+          :key="index"
+          :data="navigationEntry"
+          class="navigation-entry"/>
       </div>
     </nav>
   </div>
@@ -17,8 +20,10 @@
 
 import {Component, Vue} from "vue-property-decorator";
 import NavigationData from "~/src/typings/NavigationData";
-
-@Component
+import NavigationEntry from "~/components/NavigationEntry.vue";
+@Component({
+  components: {NavigationEntry}
+})
 export default class Navigation extends Vue{
 
   navigationData: NavigationData | null = null
@@ -87,7 +92,7 @@ export default class Navigation extends Vue{
   background: linear-gradient(90deg, rgba(233 78 27 / 100%) 0%, rgba(191 23 34 / 100%) 100%);
   width: 100%;
   height: 0.5vh;
-  transform: translateY(15px);
+  transform: translateY(3vh);
   border-radius: 30px;
   opacity: 0;
   transition: 0.3s;
@@ -95,7 +100,7 @@ export default class Navigation extends Vue{
 
 #navigation #navigation-entries .navigation-entry:hover::after {
   opacity: 1;
-  transform: translateY(12px);
+  transform: translateY(2vh);
 }
 
 </style>
