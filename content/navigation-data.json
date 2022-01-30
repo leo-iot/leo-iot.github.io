@@ -1,7 +1,7 @@
 {
   "home": {
     "text": "LeoIOT",
-    "img": "~/assets/logo.png",
+    "img": "logo.png",
     "element": "#home"
   },
   "entries": [
