@@ -3,6 +3,7 @@
     <Navigation/>
     <HomeSegment/>
     <AboutSegment/>
+    <PreviewSegment/>
   </div>
 </template>
 
@@ -11,8 +12,9 @@ import Vue from 'vue'
 import {Component} from "vue-property-decorator";
 import HomeSegment from "~/components/HomeSegment.vue";
 import AboutSegment from "~/components/AboutSegment.vue";
+import PreviewSegment from "~/components/PreviewSegment.vue";
 @Component({
-  components: {AboutSegment, HomeSegment}
+  components: {PreviewSegment, AboutSegment, HomeSegment}
 })
 export default class MainPage extends Vue{}
 </script>
