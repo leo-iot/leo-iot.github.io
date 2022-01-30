@@ -14,7 +14,7 @@ export default class HomeSegment extends Vue{
 
   async created() {
     const context = this.$nuxt.context
-    const fetchResult = await context.$content('home-data').fetch()
+    const fetchResult = await context.$content('home/home-data').fetch()
 
     this.homeData = fetchResult as any
   }
