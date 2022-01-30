@@ -49,5 +49,12 @@ export default {
   content: {},
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
-  build: {},
+  build: {
+
+    extend(_1, _2) {}
+  },
+
+  typescript: {
+    strict: true
+  }
 }

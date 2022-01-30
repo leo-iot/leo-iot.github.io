@@ -1,13 +1,20 @@
 <template>
-  <InProgress />
+  <MainPage/>
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
-import InProgress from "~/components/InProgress.vue";
+import {Context} from "@nuxt/types";
 
 export default Vue.extend({
   name: 'IndexPage',
-  components: {InProgress},
+  components: {},
+  async asyncData(context: Context): Promise<object | void> {
+    const doc = await context.$content('index').fetch()
+
+    return {
+      doc
+    }
+  }
 })
 </script>
