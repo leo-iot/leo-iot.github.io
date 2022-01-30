@@ -48,6 +48,7 @@ export default class Navigation extends Vue{
 
 #navigation nav {
   position: fixed;
+  z-index: 1;
   top: 0;
   width: 100%;
   height: 10vh;
