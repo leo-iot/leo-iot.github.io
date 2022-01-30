@@ -1,7 +1,9 @@
 <template>
   <div id="navigation-entry">
-    <img v-if="data.img" :src="image"  alt="Logo">
-    <div v-else>{{data.text}}</div>
+    <a :href="data.url ? data.url : data.element">
+      <img v-if="data.img" :src="image"  alt="Logo">
+      <div v-else>{{data.text}}</div>
+    </a>
   </div>
 </template>
 
@@ -34,7 +36,14 @@ export default Vue.extend({
   align-items: center;
 }
 
-#navigation-entry img {
+#navigation-entry a {
+  all: unset;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#navigation-entry a img {
   height: 8vh;
 }
 </style>

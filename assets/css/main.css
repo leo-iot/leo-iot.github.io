@@ -9,6 +9,7 @@ body {
 
 *, *::after, *::before {
   font-family: 'Dongle', sans-serif;
+  scroll-behavior: smooth;
 }
 
 .nuxt-content h1 {
