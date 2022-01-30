@@ -2,24 +2,24 @@
   "home": {
     "text": "LeoIOT",
     "img": "logo.png",
-    "element": "#home"
+    "element": "#home-segment"
   },
   "entries": [
     {
       "text": "About",
-      "element": "#about"
+      "element": "#about-segment"
     },
     {
       "text": "Preview",
-      "element": "#preview"
+      "element": "#preview-segment"
     },
     {
       "text": "Team",
-      "element": "#team"
+      "element": "#team-segment"
     },
     {
       "text": "Technologies",
-      "element": "#technologies"
+      "element": "#technologies-segment"
     },
     {
       "text": "Architecture",
