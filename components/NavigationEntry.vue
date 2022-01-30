@@ -37,7 +37,8 @@ export default Vue.extend({
 }
 
 #navigation-entry a {
-  all: unset;
+  color: black;
+  text-decoration: none;
   display: flex;
   justify-content: center;
   align-items: center;
