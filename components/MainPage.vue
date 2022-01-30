@@ -12,15 +12,7 @@ import HomeSegment from "~/components/HomeSegment.vue";
 @Component({
   components: {HomeSegment}
 })
-export default class MainPage extends Vue{
-  content: any = {}
-
-  async created() {
-    this.content = await this.$nuxt
-      .context.$content('index').fetch()
-  }
-
-}
+export default class MainPage extends Vue{}
 </script>
 
 <style scoped>
