@@ -4,7 +4,9 @@
       <nuxt-content :document="text"/>
     </div>
     <div id="image">
-
+      <div id="image-container">
+        <img :src="image" alt="">
+      </div>
     </div>
   </div>
 </template>
@@ -27,6 +29,14 @@ export default class AboutSegment extends Vue{
 
     this.text = await this.$nuxt
       .context.$content('about/about-text').fetch()
+  }
+
+  get image() {
+    if (this.data) {
+      return require(`~/assets/${this.data.img}`)
+    } else {
+      return ''
+    }
   }
 
 }
@@ -53,5 +63,23 @@ export default class AboutSegment extends Vue{
 #about-segment #image {
   height: 100%;
   width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#about-segment #image #image-container {
+  width: 20vw;
+  height: 20vw;
+  background-color: white;
+  box-shadow: 0 0 12px -4px #000;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#about-segment #image #image-container img{
+  width: 70%;
 }
 </style>
