@@ -30,7 +30,7 @@ export default class Navigation extends Vue{
 
   async created() {
     const fetchReturn = await this.$nuxt
-      .context.$content('navigation-data').fetch()
+      .context.$content('navigation/navigation-data').fetch()
 
     this.navigationData = fetchReturn as any
   }
