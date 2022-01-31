@@ -45,6 +45,6 @@ export default Vue.extend({
 }
 
 #navigation-entry a img {
-  height: 4vw;
+  height: 6vh;
 }
 </style>
