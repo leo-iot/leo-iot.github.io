@@ -41,12 +41,13 @@ export default class PreviewSectionEntry extends Vue {
 <style scoped>
 .preview {
   width: 48%;
-  height: 80%;
+  height: 90%;
   background-color: white;
   box-shadow: 0 0 12px -4px #000;
   border-radius: 20px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  overflow: hidden;
 }
 
 .preview .image {
@@ -68,6 +69,7 @@ export default class PreviewSectionEntry extends Vue {
 }
 
 .preview .text .button {
+  margin: 1vw 0;
   position: relative;
   font-size: 3vw;
   padding: 0.5vw;

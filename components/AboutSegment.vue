@@ -1,5 +1,5 @@
 <template>
-  <div id="about-segment">
+  <div id="about-segment" class="wrapped-content">
     <div id="text">
       <nuxt-content :document="text"/>
     </div>

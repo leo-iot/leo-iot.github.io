@@ -41,14 +41,15 @@ export default class Navigation extends Vue{
 <style scoped>
 
 #navigation {
+  width: 100vw;
+  position: fixed;
+  z-index: 1;
+  top: 0;
   background-color: black;
   font-size: 2vw;
 }
 
 #navigation nav {
-  position: fixed;
-  z-index: 1;
-  top: 0;
   width: 100%;
   height: 100px;
   background-color: white;

@@ -1,5 +1,5 @@
 <template>
-<div v-if="homeData" id="home-segment" :style="{backgroundImage: `url('${coverImage}')`}">
+<div v-if="homeData" id="home-segment" class="full-content" :style="{backgroundImage: `url('${coverImage}')`}">
 </div>
 </template>
 
@@ -31,7 +31,7 @@ export default class HomeSegment extends Vue{
 
 <style scoped>
 #home-segment {
-  height: 80vh;
+  height: 1000px;
   width: 100%;
   background-size: cover;
   display: flex;

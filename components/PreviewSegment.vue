@@ -1,5 +1,5 @@
 <template>
-  <div  v-if="datax" id="preview-segment">
+  <div  v-if="datax" id="preview-segment" class="wrapped-content">
     <PreviewSectionEntry :data="datax.dashboard" :text="dashboardText"/>
     <PreviewSectionEntry :data="datax.model3d" :text="model3dText"/>
   </div>
@@ -45,8 +45,8 @@ export default class PreviewSegment extends Vue{
 
 <style scoped>
 #preview-segment {
-  height: 600px;
   width: 100%;
+  height: 600px;
   display: flex;
   justify-content: space-between;
   align-items: center;
