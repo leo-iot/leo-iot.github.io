@@ -1,7 +1,7 @@
 <template>
   <div  v-if="datax" id="preview-segment">
     <PreviewSectionEntry :data="datax.dashboard" :text="dashboardText"/>
-    <PreviewSectionEntry :data="datax.model3d" :text="dashboardText"/>
+    <PreviewSectionEntry :data="datax.model3d" :text="model3dText"/>
   </div>
 </template>
 
@@ -45,10 +45,10 @@ export default class PreviewSegment extends Vue{
 
 <style scoped>
 #preview-segment {
-  height: 50vh;
+  height: 600px;
   width: 100%;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
 }
 
@@ -61,7 +61,7 @@ export default class PreviewSegment extends Vue{
 }
 
 .text p {
-  line-height: 3vh;
+  line-height: 1.5vw;
 }
 
 </style>

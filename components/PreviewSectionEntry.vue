@@ -40,7 +40,7 @@ export default class PreviewSectionEntry extends Vue {
 
 <style scoped>
 .preview {
-  width: 40%;
+  width: 48%;
   height: 80%;
   background-color: white;
   box-shadow: 0 0 12px -4px #000;

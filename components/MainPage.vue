@@ -2,8 +2,12 @@
   <div id="main-page">
     <Navigation/>
     <HomeSegment/>
-    <AboutSegment/>
-    <PreviewSegment/>
+    <div id="wrapper-container">
+      <div id="wrapper">
+        <AboutSegment/>
+        <PreviewSegment/>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -23,5 +27,19 @@ export default class MainPage extends Vue{}
 #main-page {
   width: 100vw;
   height: 100vh;
+}
+
+#wrapper-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#wrapper {
+  width: 70vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 </style>
