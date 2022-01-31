@@ -1,7 +1,7 @@
 <template>
   <div v-if="navigationData !== null" id="navigation" >
     <nav>
-      <div id="home">
+      <div id="home-entry">
         <NavigationEntry
           :data="navigationData.home"/>
       </div>
@@ -41,7 +41,6 @@ export default class Navigation extends Vue{
 <style scoped>
 
 #navigation {
-  height: 10vh;
   background-color: black;
   font-size: 2vw;
 }
@@ -51,7 +50,7 @@ export default class Navigation extends Vue{
   z-index: 1;
   top: 0;
   width: 100%;
-  height: 10vh;
+  height: 100px;
   background-color: white;
   box-shadow: 0 0 12px -4px #000;
   display: flex;
@@ -60,7 +59,7 @@ export default class Navigation extends Vue{
   flex-direction: row;
 }
 
-#navigation #home {
+#navigation #home-entry {
   width: 10%;
   height: 100%;
   display: grid;

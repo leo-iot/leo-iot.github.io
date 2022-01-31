@@ -1,11 +1,11 @@
 <template>
   <div id="main-page">
     <Navigation/>
-    <HomeSegment/>
+    <div id="home" class="anchor"/><HomeSegment/>
     <div id="wrapper-container">
       <div id="wrapper">
-        <AboutSegment/>
-        <PreviewSegment/>
+        <div id="about" class="anchor"/><AboutSegment/>
+        <div id="preview" class="anchor"/><PreviewSegment/>
       </div>
     </div>
   </div>
@@ -41,5 +41,9 @@ export default class MainPage extends Vue{}
   justify-content: center;
   align-items: center;
   flex-direction: column;
+}
+
+.anchor {
+  height: 100px;
 }
 </style>
