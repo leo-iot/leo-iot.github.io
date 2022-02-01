@@ -1,5 +1,5 @@
 {
-  "imageDirectory": "team/team_images/",
+  "imageDirectory": "img/team/team_images/",
   "defaultImage": "default.webp",
   "groups": [
     {

@@ -1,8 +1,8 @@
 <template>
   <div class="team-entry">
-    <div class="foto"></div>
-    <div class="name">{{data.name}}</div>
-    <div v-for="(role, index) in data.roles" :key="index" class="role">{{ role }}</div>
+    <div class="foto" :style="{backgroundImage: `url('${image}')`}"></div>
+    <div class="name">{{ member.name }}</div>
+    <div v-for="(role, index) in member.roles" :key="index" class="role">{{ role }}</div>
   </div>
 </template>
 
@@ -10,13 +10,32 @@
 
 import {Component, Prop, Vue} from "vue-property-decorator";
 import TeamMemberData from "~/src/typings/TeamMemberData";
+import TeamData from "~/src/typings/TeamData";
 
 @Component
 export default class TeamMemberEntry extends Vue {
 
   @Prop({required: true})
-  data!: TeamMemberData
+  member!: TeamMemberData
 
+  @Prop({required: true})
+  team?: TeamData | null
+
+  get image() {
+    if (this.team) {
+      try {
+        if (this.member.image) {
+          return require(`~/assets/${this.team.imageDirectory}${this.member.image}`)
+        } else {
+          throw new Error('not found')
+        }
+      } catch (e) {
+        return require(`~/assets/${this.team.imageDirectory}${this.team.defaultImage}`)
+      }
+    } else {
+      return ''
+    }
+  }
 }
 </script>
 

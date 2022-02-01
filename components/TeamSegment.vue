@@ -1,9 +1,9 @@
 <template>
-<div v-if="data" id="team-segment" >
+<div v-if="team" id="team-segment" >
   <div id="background"></div>
 
   <div id="content">
-    <TeamGroup v-for="(group, index) in data.groups" :key="index" :data="group"/>
+    <TeamGroup v-for="(group, index) in team.groups" :key="index" :group="group" :team="team"/>
   </div>
 </div>
 </template>
@@ -19,10 +19,10 @@ import TeamData from "~/src/typings/TeamData";
 })
 export default class TeamSegment extends Vue {
 
-  data: TeamData | null = null
+  team: TeamData | null = null
 
   async created() {
-    this.data = await this.$nuxt.context
+    this.team = await this.$nuxt.context
       .$content('team/team-data').fetch() as any
   }
 
