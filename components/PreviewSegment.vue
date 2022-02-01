@@ -8,8 +8,11 @@
 <script lang="ts">
 import {Component, Vue} from "vue-property-decorator";
 import PreviewData from "~/src/typings/PreviewData";
+import PreviewSectionEntry from "~/components/PreviewSectionEntry.vue";
 
-@Component
+@Component({
+  components: {PreviewSectionEntry}
+})
 export default class PreviewSegment extends Vue{
   datax: PreviewData | null = null
   model3dText: any = null
