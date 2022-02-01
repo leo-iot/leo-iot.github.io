@@ -2,7 +2,7 @@
   <div class="team-group">
     <div class="team-group-title">{{ data.name }}</div>
     <div class="team-entries">
-      <TeamEntry v-for="(member, index) in data.entries" :key="index" :data="member"/>
+      <TeamEntry v-for="(member, index) in data.members" :key="index" :data="member"/>
     </div>
   </div>
 </template>

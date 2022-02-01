@@ -2,44 +2,44 @@
   "groups": [
     {
       "name": "5AHITM",
-      "entries": [
+      "members": [
         {
           "name": "Quirin Ecker",
-          "role": ["Project Leader", "Server Developer"]
+          "roles": ["Project Leader", "Server Developer"]
         },
         {
           "name": "Simon Knogler",
-          "role": ["Dashboard Developer"]
+          "roles": ["Dashboard Developer"]
         },
         {
           "name": "Florian Klausner",
-          "role": ["Dashboard Developer"]
+          "roles": ["Dashboard Developer"]
         }
       ]
     },
     {
       "name": "5AHIF",
-      "entries": [
+      "members": [
         {
           "name": "Vinzent Kronreif",
-          "role": ["Value Simulator Developer"]
+          "roles": ["Value Simulator Developer"]
         },
         {
           "name": "Felix Rieser",
-          "role": ["Value Simulator Developer"]
+          "roles": ["Value Simulator Developer"]
         }
       ]
     },
     {
       "name": "4AHIF",
-      "entries": [
+      "members": [
         {
           "name": "Jakob Rathberger",
-          "role": ["3D Model Developer"]
+          "roles": ["3D Model Developer"]
         },
         {
           "name": "Philipp Kerschbaum",
-          "role": ["3D Model Developer"]
+          "roles": ["3D Model Developer"]
         }
       ]
     }

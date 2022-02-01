@@ -2,7 +2,7 @@
   <div class="team-entry">
     <div class="foto"></div>
     <div class="name">{{data.name}}</div>
-    <div v-for="(role, index) in data.role" :key="index" class="role">{{ role }}</div>
+    <div v-for="(role, index) in data.roles" :key="index" class="role">{{ role }}</div>
   </div>
 </template>
 
