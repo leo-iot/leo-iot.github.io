@@ -9,7 +9,7 @@
 
 <script lang="ts">
 import {Component, Prop, Vue} from "vue-property-decorator";
-import TeamEntry from '~/components/TeamEntry.vue'
+import TeamEntry from '~/components/TeamMemberEntry.vue'
 import TeamGroupData from "~/src/typings/TeamGroupData";
 
 @Component({

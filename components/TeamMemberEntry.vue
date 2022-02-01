@@ -12,7 +12,7 @@ import {Component, Prop, Vue} from "vue-property-decorator";
 import TeamMemberData from "~/src/typings/TeamMemberData";
 
 @Component
-export default class TeamEntry extends Vue {
+export default class TeamMemberEntry extends Vue {
 
   @Prop({required: true})
   data!: TeamMemberData
