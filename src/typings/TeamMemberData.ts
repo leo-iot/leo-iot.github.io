@@ -1,4 +1,5 @@
 export default interface TeamMemberData {
   name: string,
-  roles: string[]
+  roles: string[],
+  image: string
 }

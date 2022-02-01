@@ -1,19 +1,24 @@
 {
+  "imageDirectory": "team/team_images/",
+  "defaultImage": "default.webp",
   "groups": [
     {
       "name": "5AHITM",
       "members": [
         {
           "name": "Quirin Ecker",
-          "roles": ["Project Leader", "Server Developer"]
+          "roles": ["Project Leader", "Server Developer"],
+          "image": "quirinecker.png"
         },
         {
           "name": "Simon Knogler",
-          "roles": ["Dashboard Developer"]
+          "roles": ["Dashboard Developer"],
+          "image": "simonknogler.png"
         },
         {
           "name": "Florian Klausner",
-          "roles": ["Dashboard Developer"]
+          "roles": ["Dashboard Developer"],
+          "image": "florianklausner.png"
         }
       ]
     },
@@ -22,11 +27,13 @@
       "members": [
         {
           "name": "Vinzent Kronreif",
-          "roles": ["Value Simulator Developer"]
+          "roles": ["Value Simulator Developer"],
+          "image": "vinzentkronreif.png"
         },
         {
           "name": "Felix Rieser",
-          "roles": ["Value Simulator Developer"]
+          "roles": ["Value Simulator Developer"],
+          "image": "felixrieser.png"
         }
       ]
     },
@@ -35,11 +42,13 @@
       "members": [
         {
           "name": "Jakob Rathberger",
-          "roles": ["3D Model Developer"]
+          "roles": ["3D Model Developer"],
+          "image": "jakobrathberger.png"
         },
         {
           "name": "Philipp Kerschbaum",
-          "roles": ["3D Model Developer"]
+          "roles": ["3D Model Developer"],
+          "image": "philippkerschbaum.png"
         }
       ]
     }
