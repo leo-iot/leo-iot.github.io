@@ -7,6 +7,7 @@
       <div id="about" class="anchor"/><AboutSegment/>
       <div id="preview" class="anchor"/><PreviewSegment/>
       <div id="team" class="anchor"/><TeamSegment/>
+      <div id="technology" class="anchor"/><TechnologySegment/>
     </div>
   </div>
 </template>
@@ -18,9 +19,10 @@ import HomeSegment from "~/components/HomeSegment.vue";
 import AboutSegment from "~/components/AboutSegment.vue";
 import PreviewSegment from "~/components/PreviewSegment.vue";
 import TeamSegment from "~/components/TeamSegment.vue"
+import TechnologySegment from "~/components/TechnologySegment.vue"
 
 @Component({
-  components: {PreviewSegment, AboutSegment, HomeSegment, TeamSegment}
+  components: {PreviewSegment, AboutSegment, HomeSegment, TeamSegment, TechnologySegment}
 })
 export default class MainPage extends Vue{}
 </script>
