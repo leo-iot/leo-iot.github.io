@@ -1,0 +1,9 @@
+{
+  "imageDirectory": "img/technology/technology_images/",
+  "technologies": [
+    {
+      "name": "Angular",
+      "img": "angular.png"
+    }
+  ]
+}
