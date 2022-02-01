@@ -31,6 +31,7 @@ export default class TeamSegment extends Vue {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 20px;
 }
 
 #background {
@@ -39,7 +40,7 @@ export default class TeamSegment extends Vue {
   background: rgb(233 78 27);
   background: linear-gradient(90deg, rgba(233 78 27 / 100%) 0%, rgba(191 23 34 / 100%) 100%);
   box-shadow: 0 0 12px -4px #000;
-  border-radius: 50px 50px 0 0;
+  border-radius: 50px;
   width: 100vw;
   height: 100%;
 }
@@ -48,7 +49,6 @@ export default class TeamSegment extends Vue {
   position: relative;
   top: 0;
   width: 100%;
-  height: 500px;
 }
 
 </style>

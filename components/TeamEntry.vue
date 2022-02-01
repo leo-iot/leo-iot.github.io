@@ -19,6 +19,20 @@ export default class TeamEntry extends Vue {
 <style scoped>
 .team-entry {
   width: 20%;
-  height: 100%;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.team-entry .foto {
+  position: relative;
+  width: 80%;
+  height: 0;
+  border-radius: 80%;
+  background-image: url("~/assets/img/img3dModel.png");
+  background-size: cover;
+  padding-bottom: 80%;
 }
 </style>
