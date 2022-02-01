@@ -19,6 +19,6 @@ export default class TeamEntry extends Vue {
 <style scoped>
 .team-entry {
   width: 20%;
-  height: 100px;
+  height: 100%;
 }
 </style>
