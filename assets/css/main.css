@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Dongle:wght@300&display=swap');
 /*font-family: 'Dongle', sans-serif;*/
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -9,7 +13,6 @@ body {
 
 *, *::after, *::before {
   font-family: 'Dongle', sans-serif;
-  scroll-behavior: smooth;
 }
 
 .nuxt-content h1 {
@@ -20,4 +23,3 @@ body {
   font-size: 1.8vw;
   margin: 0;
 }
-

@@ -1,5 +1,5 @@
 <template>
-  <div id="about-segment">
+  <div id="about-segment" class="wrapped-content">
     <div id="text">
       <nuxt-content :document="text"/>
     </div>
@@ -44,7 +44,7 @@ export default class AboutSegment extends Vue{
 
 <style scoped>
 #about-segment {
-  height: 50vh;
+  height: 500px;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -52,9 +52,9 @@ export default class AboutSegment extends Vue{
 }
 
 #about-segment #text {
-  height: 80%;
-  width: 30%;
-  padding: 10%;
+  height: 100%;
+  width: 50%;
+  padding: 5%;
   display: flex;
   justify-content: center;
   align-items: center;

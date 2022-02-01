@@ -1,4 +1,6 @@
+import PreviewEntryData from "~/src/typings/PreviewEntryData";
+
 export default interface PreviewData {
-  img3dModel: string,
-  imgDashBoard: string
+  model3d: PreviewEntryData
+  dashboard: PreviewEntryData
 }
