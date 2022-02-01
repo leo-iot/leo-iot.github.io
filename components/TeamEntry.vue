@@ -1,17 +1,21 @@
 <template>
   <div class="team-entry">
     <div class="foto"></div>
-    <div class="name">Quirin Ecker</div>
-    <div class="role">Backend Developer</div>
+    <div class="name">{{data.name}}</div>
+    <div v-for="(role, index) in data.role" :key="index" class="role">{{ role }}</div>
   </div>
 </template>
 
-<script>
+<script lang="ts">
 
-import {Component, Vue} from "vue-property-decorator";
+import {Component, Prop, Vue} from "vue-property-decorator";
+import TeamMemberData from "~/src/typings/TeamMemberData";
 
 @Component
 export default class TeamEntry extends Vue {
+
+  @Prop({required: true})
+  data!: TeamMemberData
 
 }
 </script>
@@ -21,7 +25,6 @@ export default class TeamEntry extends Vue {
   width: 20%;
   height: 20vw;
   display: flex;
-  justify-content: center;
   align-items: center;
   flex-direction: column;
 }
@@ -31,6 +34,7 @@ export default class TeamEntry extends Vue {
   width: 80%;
   height: 0;
   border-radius: 80%;
+  box-shadow: 0 0 12px -4px #000;
   background-image: url("~/assets/img/img3dModel.png");
   background-size: cover;
   padding-bottom: 80%;

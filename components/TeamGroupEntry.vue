@@ -1,22 +1,24 @@
 <template>
   <div class="team-group">
-    <div class="team-group-title">5AHITM</div>
+    <div class="team-group-title">{{ data.name }}</div>
     <div class="team-entries">
-      <TeamEntry/>
-      <TeamEntry/>
-      <TeamEntry/>
+      <TeamEntry v-for="(member, index) in data.entries" :key="index" :data="member"/>
     </div>
   </div>
 </template>
 
-<script>
-import {Component, Vue} from "vue-property-decorator";
+<script lang="ts">
+import {Component, Prop, Vue} from "vue-property-decorator";
 import TeamEntry from '~/components/TeamEntry.vue'
+import TeamGroupData from "~/src/typings/TeamGroupData";
 
 @Component({
   components: {TeamEntry}
 })
-export default class TeamGroup extends Vue {
+export default class TeamGroupEntry extends Vue {
+
+  @Prop({required: true})
+  data!: TeamGroupData
 
 }
 </script>
@@ -37,6 +39,7 @@ export default class TeamGroup extends Vue {
 }
 
 .team-group .team-group-title {
+  margin-top: 20px;
   font-size: 2vw;
   height: 30px;
 }
@@ -46,6 +49,6 @@ export default class TeamGroup extends Vue {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-
+  margin-top: 40px;
 }
 </style>

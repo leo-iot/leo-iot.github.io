@@ -3,7 +3,7 @@
   <div id="background"></div>
 
   <div id="content">
-    <TeamGroup v-for="(group, index) in data.groups" :key="index"/>
+    <TeamGroup v-for="(group, index) in data.groups" :key="index" :data="group"/>
   </div>
 </div>
 </template>
@@ -11,7 +11,7 @@
 <script lang="ts">
 
 import {Component, Vue} from "vue-property-decorator";
-import TeamGroup from "~/components/TeamGroup.vue"
+import TeamGroup from "~/components/TeamGroupEntry.vue"
 import TeamData from "~/src/typings/TeamData";
 
 @Component({
