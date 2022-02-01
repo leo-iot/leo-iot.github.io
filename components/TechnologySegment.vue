@@ -1,15 +1,23 @@
 <template>
-  <div id="technologies-segment">
-
+  <div v-if="technologyData" id="technologies-segment">
+    <TechnologyEntry v-for="(technology, index) in technologyData.technologies" :key="index" :technology="technology" :technology-data="technologyData"/>
   </div>
 </template>
 
-<script>
-import {Vue} from "vue-property-decorator";
-import Component from "vue-class-component";
+<script lang="ts">
+import {Component, Vue} from "vue-property-decorator";
+import TechnologyEntry from "~/components/TechnologyEntry.vue"
+import TechnologyData from "~/src/typings/TechnologyData";
 
-@Component
+@Component({components: {TechnologyEntry}})
 export default class TechnologySegment extends Vue {
+
+  technologyData: TechnologyData | null = null
+
+  async created() {
+    this.technologyData = await this.$nuxt
+      .context.$content('technology/technology-data').fetch() as any
+  }
 
 }
 
