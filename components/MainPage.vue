@@ -6,6 +6,7 @@
     <div id="wrapper">
       <div id="about" class="anchor"/><AboutSegment/>
       <div id="preview" class="anchor"/><PreviewSegment/>
+      <div id="team" class="anchor"/><TeamSegment/>
     </div>
   </div>
 </template>
@@ -16,8 +17,10 @@ import {Component} from "vue-property-decorator";
 import HomeSegment from "~/components/HomeSegment.vue";
 import AboutSegment from "~/components/AboutSegment.vue";
 import PreviewSegment from "~/components/PreviewSegment.vue";
+import TeamSegment from "~/components/TeamSegment.vue"
+
 @Component({
-  components: {PreviewSegment, AboutSegment, HomeSegment}
+  components: {PreviewSegment, AboutSegment, HomeSegment, TeamSegment}
 })
 export default class MainPage extends Vue{}
 </script>
