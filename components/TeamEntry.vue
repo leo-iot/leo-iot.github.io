@@ -45,8 +45,9 @@ export default class TeamEntry extends Vue {
 }
 
 .team-entry .role {
-  font-size: 1vw;
-  transform: translateY(-1vw);
+  font-size: 1.5vw;
+  line-height: 1.2vw;
+  transform: translateY(-0.8vw);
   color: gray;
 }
 </style>
