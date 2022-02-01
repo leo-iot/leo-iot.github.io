@@ -1,0 +1,50 @@
+{
+  "groups": [
+    {
+      "name": "5AHITM",
+      "entries": [
+        {
+          "name": "Quirin Ecker",
+          "role": ["Project Leader", "Server Developer"]
+        },
+        {
+          "name": "Simon Knogler",
+          "role": ["Dashboard Developer"]
+        },
+        {
+          "name": "Florian Klausner",
+          "role": ["Dashboard Developer"]
+        }
+      ]
+    },
+    {
+      "name": "5AHIF",
+      "entries": [
+        {
+          "name": "Vinzent Kronreif",
+          "role": ["Value Simulator Developer"]
+        },
+        {
+          "name": "Felix Rieser",
+          "role": ["Value Simulator Developer"]
+        }
+      ]
+    },
+    {
+      "name": "4AHIF",
+      "entries": [
+        {
+          "name": "Jakob Rathberger",
+          "role": ["3D Model Developer"]
+        },
+        {
+          "name": "Philipp Kerschbaum",
+          "role": ["3D Model Developer"]
+        }
+      ]
+    }
+  ],
+  "hidden-groups": [
+
+  ]
+}

@@ -1,22 +1,30 @@
 <template>
-<div id="team-segment">
+<div v-if="data" id="team-segment" >
   <div id="background"></div>
 
   <div id="content">
-    <TeamGroup/>
+    <TeamGroup v-for="(group, index) in data.groups" :key="index"/>
   </div>
 </div>
 </template>
 
-<script>
+<script lang="ts">
 
 import {Component, Vue} from "vue-property-decorator";
 import TeamGroup from "~/components/TeamGroup.vue"
+import TeamData from "~/src/typings/TeamData";
 
 @Component({
   components: {TeamGroup}
 })
 export default class TeamSegment extends Vue {
+
+  data: TeamData | null = null
+
+  async created() {
+    this.data = await this.$nuxt.context
+      .$content('team/team-data').fetch() as any
+  }
 
 }
 
