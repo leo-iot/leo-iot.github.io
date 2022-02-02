@@ -4,6 +4,50 @@
     {
       "name": "Angular",
       "img": "angular.png"
+    },
+    {
+      "name": "MQTT",
+      "img": "mqtt.svg"
+    },
+    {
+      "name": "Quarkus",
+      "img": "quarkus.png"
+    },
+    {
+      "name": "C++",
+      "img": "cpp.png"
+    },
+    {
+      "name": "Git",
+      "img": "git.png"
+    },
+    {
+      "name": "GitHub",
+      "img": "github.svg"
+    },
+    {
+      "name": "Java",
+      "img": "java.svg"
+    },
+    {
+      "name": "Typescript",
+      "img": "typescript.svg"
+    },
+    {
+      "name": "YouTrack",
+      "img": "youtrack.svg"
+    },
+    {
+      "name": "NuxtJS",
+      "img": "nuxtjs.svg"
+    },
+    {
+      "name": "Docker",
+      "img": "docker.svg"
+    },
+    {
+      "name": "Docker Compose",
+      "img": "dockercompose.svg"
     }
   ]
 }
