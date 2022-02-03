@@ -1,5 +1,5 @@
 <template>
-  <div id="footer">
+  <div v-if="footerData" id="footer">
     <div id="background"></div>
 
     <div id="content">
@@ -7,20 +7,23 @@
         <div class="col">
           <div class="col-content">
             <h1>Links</h1>
-            <a>GitHub</a>
-            <a>YouTrack</a>
-            <a>3d Modell</a>
-            <a>Dashboard</a>
+            <a
+              v-for="(entry, index) in footerData.links"
+              :key="index"
+              :href="entry.url"
+            >{{ entry.text }}</a>
           </div>
         </div>
         <div class="col">
           <div class="col-content">
             <h1>Content</h1>
-            <a>About</a>
-            <a>Preview</a>
-            <a>Team</a>
-            <a>Technology</a>
-            <a>Architecture</a>
+            <a
+              v-for="(entry, index) in footerData.navigation"
+              :key="index"
+              :href="entry.element"
+            >
+              {{entry.text}}
+            </a>
           </div>
         </div>
         <div class="col">
@@ -44,11 +47,20 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
 import {Component, Vue} from "vue-property-decorator";
+import FooterData from "~/src/typings/FooterData";
 
 @Component
 export default class Footer extends Vue {
+
+  footerData: FooterData | null = null
+
+  async created() {
+    this.footerData = await this.$nuxt
+      .context.$content('footer/footer-data')
+      .fetch() as any
+  }
 
 }
 
