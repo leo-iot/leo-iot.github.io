@@ -1,0 +1,58 @@
+{
+  "logo": "logo.png",
+  "links": [
+    {
+      "text": "GitHub",
+      "icon": "img/icons/github.svg",
+      "url": "https://github.com/leo-iot/"
+    },
+    {
+      "text": "YouTrack",
+      "icon": "img/icons/youtrack.svg",
+      "url": "https://vm81.htl-leonding.ac.at/projects/6772937b-917f-4366-ab92-8c2e58450285"
+    },
+    {
+      "text": "3d Model",
+      "icon": "logo.png",
+      "url": "http://vm139.htl-leonding.ac.at/3d"
+    },
+    {
+      "text": "Dashboard",
+      "icon": "logo.png",
+      "url": "http://vm139.htl-leonding.ac.at/dashboard"
+    }
+  ],
+  "navigation": [
+    {
+      "text": "About",
+      "element": "#about"
+    },
+    {
+      "text": "Preview",
+      "element": "#preview"
+    },
+    {
+      "text": "Team",
+      "element": "#team"
+    },
+    {
+      "text": "Technology",
+      "element": "#technology"
+    },
+    {
+      "text": "Architecture",
+      "element": "#architecture"
+    }
+  ],
+  "languages": [
+    {
+      "name": "English",
+      "url": "/en"
+    },
+    {
+      "name": "German",
+      "url": "/de"
+    }
+  ]
+}
+
