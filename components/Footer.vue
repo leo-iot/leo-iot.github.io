@@ -10,7 +10,6 @@
             <a
               v-for="(entry, index) in footerData.links"
               :key="index"
-              class="icon-link"
               :href="entry.url"
             ><img :src="fetchImage(entry.icon)" :alt="entry.text">{{ entry.text }}</a>
           </div>
@@ -33,7 +32,6 @@
             <a
               v-for="(language, index) in footerData.languages"
               :key="index"
-              class="icon-link"
               :href="language.url"
             ><img v-if="language.icon" :src="language.icon" alt=""> {{ language.name }}</a>
           </div>
