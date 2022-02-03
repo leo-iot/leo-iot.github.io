@@ -10,8 +10,9 @@
             <a
               v-for="(entry, index) in footerData.links"
               :key="index"
+              class="icon-link"
               :href="entry.url"
-            >{{ entry.text }}</a>
+            ><img :src="fetchImage(entry.icon)" :alt="entry.text">{{ entry.text }}</a>
           </div>
         </div>
         <div class="col">
@@ -29,13 +30,17 @@
         <div class="col">
           <div class="col-content">
             <h1>Languages</h1>
-            <a>English</a>
-            <a>German</a>
+            <a
+              v-for="(language, index) in footerData.languages"
+              :key="index"
+              class="icon-link"
+              :href="language.url"
+            ><img v-if="language.icon" :src="language.icon" alt=""> {{ language.name }}</a>
           </div>
         </div>
         <div class="col">
           <div id="logo-container">
-            <img src="~/assets/logo.png" alt="logo">
+            <img :src="fetchImage(footerData.logo)" alt="logo">
           </div>
         </div>
       </div>
@@ -60,6 +65,10 @@ export default class Footer extends Vue {
     this.footerData = await this.$nuxt
       .context.$content('footer/footer-data')
       .fetch() as any
+  }
+
+  fetchImage(path: string) {
+    return require(`~/assets/${path}`)
   }
 
 }
@@ -110,7 +119,7 @@ export default class Footer extends Vue {
   display: flex;
   flex-direction: column;
   color: white;
-  line-height: 4vh;
+  line-height: 5vh;
   font-size: 1.5vw ;
 }
 
@@ -118,10 +127,16 @@ export default class Footer extends Vue {
   color: white;
   cursor: pointer;
   transition: all 0.5s;
+  display: flex;
+  gap: 0.3vw;
 }
 
 #footer #content #cols .col .col-content a:hover {
   color: rgba(255 255 255 / 60%);
+}
+
+#footer #content #cols .col .col-content a img {
+  width: 2vw;
 }
 
 #footer #content #cols .col .col-content h1 {
