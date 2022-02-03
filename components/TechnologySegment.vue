@@ -19,28 +19,6 @@ export default class TechnologySegment extends Vue {
   async created() {
     this.technologyData = await this.$nuxt
       .context.$content('technology/technology-data').fetch() as any
-
-    // if (this.technologyData) {
-    //   this.technologiesRows.push(this.technologyData.technologies.slice(0, 4));
-    //
-    //   const bigRow = 4
-    //   let currentRow = bigRow
-    //   let n = 0
-    //   let adding = false
-    //   do {
-    //     this.technologiesRows.push(this.technologyData.technologies.slice(n, currentRow));
-    //
-    //     if (adding) {
-    //       adding = false
-    //       currentRow++
-    //     } else {
-    //       adding = true
-    //       currentRow--
-    //     }
-    //
-    //     n += currentRow
-    //   } while ()
-    // }
   }
 
 }
