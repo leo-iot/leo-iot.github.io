@@ -64,4 +64,8 @@ export default class TechnologyEntry extends Vue{
   width: 50%;
 }
 
+.technology-entry .name {
+  font-size: 2vw;
+}
+
 </style>
