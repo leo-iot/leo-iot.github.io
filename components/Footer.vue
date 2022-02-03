@@ -5,24 +5,35 @@
     <div id="content">
       <div id="cols">
         <div class="col">
-          <h1>Links</h1>
-          <a>GitHub</a>
-          <a>YouTrack</a>
-          <a>3d Modell</a>
-          <a>Dashboard</a>
+          <div class="col-content">
+            <h1>Links</h1>
+            <a>GitHub</a>
+            <a>YouTrack</a>
+            <a>3d Modell</a>
+            <a>Dashboard</a>
+          </div>
         </div>
         <div class="col">
-          <h1>Content</h1>
-          <a>About</a>
-          <a>Preview</a>
-          <a>Team</a>
-          <a>Technology</a>
-          <a>Architecture</a>
+          <div class="col-content">
+            <h1>Content</h1>
+            <a>About</a>
+            <a>Preview</a>
+            <a>Team</a>
+            <a>Technology</a>
+            <a>Architecture</a>
+          </div>
         </div>
         <div class="col">
-          <h1>Languages</h1>
-          <a>English</a>
-          <a>German</a>
+          <div class="col-content">
+            <h1>Languages</h1>
+            <a>English</a>
+            <a>German</a>
+          </div>
+        </div>
+        <div class="col">
+          <div id="logo-container">
+            <img src="~/assets/logo.png" alt="logo">
+          </div>
         </div>
       </div>
 
@@ -75,33 +86,53 @@ export default class Footer extends Vue {
   width: 100vw;
   display: grid;
   padding: 3vw;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
 }
 
 #footer #content #cols .col {
   display: flex;
+  justify-content: center;
+}
+
+#footer #content #cols .col .col-content {
+  display: flex;
   flex-direction: column;
-  align-items: center;
   color: white;
   line-height: 4vh;
   font-size: 1.5vw ;
 }
 
-#footer #content #cols .col a {
+#footer #content #cols .col .col-content a {
   color: white;
   cursor: pointer;
   transition: all 0.5s;
 }
 
-#footer #content #cols .col a:hover {
+#footer #content #cols .col .col-content a:hover {
   color: rgba(255 255 255 / 60%);
 }
 
-#footer #content #cols .col h1 {
+#footer #content #cols .col .col-content h1 {
   font-size: 2vw;
   color: white;
   cursor: pointer;
   line-height: 0.2vw;
+}
+
+#footer #content #cols .col #logo-container {
+  width: 15vw;
+  height: 15vw;
+  border-radius: 100%;
+  aspect-ratio: 1 / 1;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 12px -4px #000;
+}
+
+#footer #content #cols .col #logo-container img {
+  width: 60%;
 }
 
 #footer #copyright {
