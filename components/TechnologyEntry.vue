@@ -1,27 +1,25 @@
 <template>
-<div class="technology-entry">
+  <div class="technology-entry">
     <div class="image">
-      <img :src="image" :alt="technology.name">
+      <img :src="image" :alt="technology.name" />
     </div>
     <div class="name">
       {{ technology.name }}
     </div>
-</div>
+  </div>
 </template>
 
 <script lang="ts">
-
-import {Component, Prop, Vue} from "vue-property-decorator";
-import TechnologyEntryData from "~/src/typings/TechnologyEntryData";
-import TechnologyData from "~/src/typings/TechnologyData";
+import { Component, Prop, Vue } from 'vue-property-decorator'
+import TechnologyEntryData from '~/src/typings/TechnologyEntryData'
+import TechnologyData from '~/src/typings/TechnologyData'
 
 @Component
-export default class TechnologyEntry extends Vue{
-
-  @Prop({required: true})
+export default class TechnologyEntry extends Vue {
+  @Prop({ required: true })
   technology!: TechnologyEntryData
 
-  @Prop({required: true})
+  @Prop({ required: true })
   technologyData!: TechnologyData
 
   get image() {
@@ -31,13 +29,10 @@ export default class TechnologyEntry extends Vue{
       return ''
     }
   }
-
 }
-
 </script>
 
 <style scoped>
-
 .technology-entry {
   height: 13vw;
   width: 13vw;
@@ -67,5 +62,4 @@ export default class TechnologyEntry extends Vue{
 .technology-entry .name {
   font-size: 2vw;
 }
-
 </style>

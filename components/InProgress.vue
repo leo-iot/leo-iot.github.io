@@ -6,16 +6,15 @@
 
 <script>
 export default {
-  name: "InProgress"
+  name: 'InProgress',
 }
 </script>
 
 <style scoped>
-
 #container {
   width: 100vw;
   height: 100vh;
-  background-color: #000000B5;
+  background-color: #000000b5;
   display: flex;
   justify-content: center;
   align-items: center;

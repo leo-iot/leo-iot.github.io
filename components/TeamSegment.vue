@@ -1,37 +1,38 @@
 <template>
-<div v-if="team" id="team-segment" >
-  <div id="background"></div>
+  <div v-if="team" id="team-segment">
+    <div id="background"></div>
 
-  <div id="content">
-    <TeamGroup v-for="(group, index) in team.groups" :key="index" :group="group" :team="team"/>
+    <div id="content">
+      <TeamGroup
+        v-for="(group, index) in team.groups"
+        :key="index"
+        :group="group"
+        :team="team"
+      />
+    </div>
   </div>
-</div>
 </template>
 
 <script lang="ts">
-
-import {Component, Vue} from "vue-property-decorator";
-import TeamGroup from "~/components/TeamGroupEntry.vue"
-import TeamData from "~/src/typings/TeamData";
+import { Component, Vue } from 'vue-property-decorator'
+import TeamGroup from '~/components/TeamGroupEntry.vue'
+import TeamData from '~/src/typings/TeamData'
 
 @Component({
-  components: {TeamGroup}
+  components: { TeamGroup },
 })
 export default class TeamSegment extends Vue {
-
   team: TeamData | null = null
 
   async created() {
-    this.team = await this.$nuxt.context
-      .$content('team/team-data').fetch() as any
+    this.team = (await this.$nuxt.context
+      .$content('team/team-data')
+      .fetch()) as any
   }
-
 }
-
 </script>
 
 <style scoped>
-
 #team-segment {
   position: relative;
   width: 100%;
@@ -46,7 +47,11 @@ export default class TeamSegment extends Vue {
   position: absolute;
   top: 0;
   background: rgb(233 78 27);
-  background: linear-gradient(90deg, rgba(233 78 27 / 100%) 0%, rgba(191 23 34 / 100%) 100%);
+  background: linear-gradient(
+    90deg,
+    rgba(233 78 27 / 100%) 0%,
+    rgba(191 23 34 / 100%) 100%
+  );
   box-shadow: 0 0 12px -4px #000;
   border-radius: 50px;
   width: 100vw;
@@ -58,5 +63,4 @@ export default class TeamSegment extends Vue {
   top: 0;
   width: 100%;
 }
-
 </style>

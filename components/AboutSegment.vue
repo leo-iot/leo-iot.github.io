@@ -1,34 +1,31 @@
 <template>
   <div id="about-segment" class="wrapped-content">
     <div id="text">
-      <nuxt-content :document="text"/>
+      <nuxt-content :document="text" />
     </div>
     <div id="image">
       <div id="image-container">
-        <img :src="image" alt="">
+        <img :src="image" alt="" />
       </div>
     </div>
   </div>
 </template>
 
 <script lang="ts">
-
-
-import {Component, Vue} from "vue-property-decorator";
-import AboutData from "~/src/typings/AboutData";
+import { Component, Vue } from 'vue-property-decorator'
+import AboutData from '~/src/typings/AboutData'
 
 @Component
-export default class AboutSegment extends Vue{
-
+export default class AboutSegment extends Vue {
   data: AboutData | null = null
   text: any = {}
 
   async created() {
-    this.data = await this.$nuxt
-      .context.$content('about/about-data').fetch() as any
+    this.data = (await this.$nuxt.context
+      .$content('about/about-data')
+      .fetch()) as any
 
-    this.text = await this.$nuxt
-      .context.$content('about/about-text').fetch()
+    this.text = await this.$nuxt.context.$content('about/about-text').fetch()
   }
 
   get image() {
@@ -38,7 +35,6 @@ export default class AboutSegment extends Vue{
       return ''
     }
   }
-
 }
 </script>
 
@@ -79,7 +75,7 @@ export default class AboutSegment extends Vue{
   align-items: center;
 }
 
-#about-segment #image #image-container img{
+#about-segment #image #image-container img {
   width: 70%;
 }
 </style>

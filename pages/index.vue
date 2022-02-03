@@ -1,10 +1,10 @@
 <template>
-  <MainPage/>
+  <MainPage />
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
-import {Context} from "@nuxt/types";
+import { Context } from '@nuxt/types'
 
 export default Vue.extend({
   name: 'IndexPage',
@@ -13,8 +13,8 @@ export default Vue.extend({
     const doc = await context.$content('index').fetch()
 
     return {
-      doc
+      doc,
     }
-  }
+  },
 })
 </script>

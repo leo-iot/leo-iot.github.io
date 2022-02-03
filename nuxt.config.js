@@ -21,9 +21,7 @@ export default {
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: [
-    '@/assets/css/main.css'
-  ],
+  css: ['@/assets/css/main.css'],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [],
@@ -50,11 +48,10 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
-
-    extend(_1, _2) {}
+    extend(_1, _2) {},
   },
 
   typescript: {
-    strict: true
-  }
+    strict: true,
+  },
 }

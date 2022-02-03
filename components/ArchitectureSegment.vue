@@ -1,22 +1,21 @@
 <template>
   <div v-if="architectureData" id="architecture-segment">
-    <img :src="image" alt="architecture">
+    <img :src="image" alt="architecture" />
   </div>
 </template>
 
 <script lang="ts">
-
-import {Component, Vue} from "vue-property-decorator";
-import ArchitectureData from "~/src/typings/ArchitectureData";
+import { Component, Vue } from 'vue-property-decorator'
+import ArchitectureData from '~/src/typings/ArchitectureData'
 
 @Component
 export default class ArchitectureSegment extends Vue {
-
   architectureData: ArchitectureData | null = null
 
   async created() {
-    this.architectureData = await this.$nuxt.context
-      .$content('architecture/architecture-data').fetch() as any
+    this.architectureData = (await this.$nuxt.context
+      .$content('architecture/architecture-data')
+      .fetch()) as any
   }
 
   get image() {
@@ -26,7 +25,6 @@ export default class ArchitectureSegment extends Vue {
       return ''
     }
   }
-
 }
 </script>
 

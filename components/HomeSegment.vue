@@ -1,15 +1,18 @@
 <template>
-<div v-if="homeData" id="home-segment" class="full-content" :style="{backgroundImage: `url('${coverImage}')`}">
-</div>
+  <div
+    v-if="homeData"
+    id="home-segment"
+    class="full-content"
+    :style="{ backgroundImage: `url('${coverImage}')` }"
+  ></div>
 </template>
 
 <script lang="ts">
-import {Component, Vue} from "vue-property-decorator";
-import HomeData from "~/src/typings/HomeData";
+import { Component, Vue } from 'vue-property-decorator'
+import HomeData from '~/src/typings/HomeData'
 
 @Component
-export default class HomeSegment extends Vue{
-
+export default class HomeSegment extends Vue {
   homeData: HomeData | null = null
 
   async created() {

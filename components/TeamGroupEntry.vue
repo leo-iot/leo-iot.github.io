@@ -2,28 +2,31 @@
   <div class="team-group">
     <div class="team-group-title">{{ group.name }}</div>
     <div class="team-entries">
-      <TeamEntry v-for="(member, index) in group.members" :key="index" :member="member" :team="team"/>
+      <TeamEntry
+        v-for="(member, index) in group.members"
+        :key="index"
+        :member="member"
+        :team="team"
+      />
     </div>
   </div>
 </template>
 
 <script lang="ts">
-import {Component, Prop, Vue} from "vue-property-decorator";
+import { Component, Prop, Vue } from 'vue-property-decorator'
 import TeamEntry from '~/components/TeamMemberEntry.vue'
-import TeamGroupData from "~/src/typings/TeamGroupData";
-import TeamData from "~/src/typings/TeamData";
+import TeamGroupData from '~/src/typings/TeamGroupData'
+import TeamData from '~/src/typings/TeamData'
 
 @Component({
-  components: {TeamEntry}
+  components: { TeamEntry },
 })
 export default class TeamGroupEntry extends Vue {
-
-  @Prop({required: true})
+  @Prop({ required: true })
   group!: TeamGroupData
 
-  @Prop({required: true})
+  @Prop({ required: true })
   team!: TeamData
-
 }
 </script>
 

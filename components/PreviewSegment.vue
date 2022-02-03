@@ -1,27 +1,27 @@
 <template>
-  <div  v-if="datax" id="preview-segment" class="wrapped-content">
-    <PreviewSectionEntry :data="datax.dashboard" :text="dashboardText"/>
-    <PreviewSectionEntry :data="datax.model3d" :text="model3dText"/>
+  <div v-if="datax" id="preview-segment" class="wrapped-content">
+    <PreviewSectionEntry :data="datax.dashboard" :text="dashboardText" />
+    <PreviewSectionEntry :data="datax.model3d" :text="model3dText" />
   </div>
 </template>
 
 <script lang="ts">
-import {Component, Vue} from "vue-property-decorator";
-import PreviewData from "~/src/typings/PreviewData";
-import PreviewSectionEntry from "~/components/PreviewSectionEntry.vue";
+import { Component, Vue } from 'vue-property-decorator'
+import PreviewData from '~/src/typings/PreviewData'
+import PreviewSectionEntry from '~/components/PreviewSectionEntry.vue'
 
 @Component({
-  components: {PreviewSectionEntry}
+  components: { PreviewSectionEntry },
 })
-export default class PreviewSegment extends Vue{
+export default class PreviewSegment extends Vue {
   datax: PreviewData | null = null
   model3dText: any = null
   dashboardText: any = null
 
   async created() {
-    this.datax = await this.$nuxt.context
+    this.datax = (await this.$nuxt.context
       .$content('preview/preview-data')
-      .fetch() as any
+      .fetch()) as any
 
     this.model3dText = await this.$nuxt.context
       .$content('preview/preview-text-model3d')
@@ -54,11 +54,9 @@ export default class PreviewSegment extends Vue{
   justify-content: space-between;
   align-items: center;
 }
-
 </style>
 
 <style>
-
 .text h1 {
   font-size: 3vw;
 }
@@ -66,5 +64,4 @@ export default class PreviewSegment extends Vue{
 .text p {
   line-height: 1.5vw;
 }
-
 </style>

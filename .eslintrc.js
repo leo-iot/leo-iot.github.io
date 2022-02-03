@@ -11,5 +11,5 @@ module.exports = {
   ],
   plugins: [],
   // add your custom rules here
-  rules: {"no-use-before-declare": 0},
+  rules: { 'no-use-before-declare': 0 },
 }

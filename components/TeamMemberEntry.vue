@@ -1,24 +1,24 @@
 <template>
   <div class="team-entry">
-    <div class="foto" :style="{backgroundImage: `url('${image}')`}"></div>
+    <div class="foto" :style="{ backgroundImage: `url('${image}')` }"></div>
     <div class="name">{{ member.name }}</div>
-    <div v-for="(role, index) in member.roles" :key="index" class="role">{{ role }}</div>
+    <div v-for="(role, index) in member.roles" :key="index" class="role">
+      {{ role }}
+    </div>
   </div>
 </template>
 
 <script lang="ts">
-
-import {Component, Prop, Vue} from "vue-property-decorator";
-import TeamMemberData from "~/src/typings/TeamMemberData";
-import TeamData from "~/src/typings/TeamData";
+import { Component, Prop, Vue } from 'vue-property-decorator'
+import TeamMemberData from '~/src/typings/TeamMemberData'
+import TeamData from '~/src/typings/TeamData'
 
 @Component
 export default class TeamMemberEntry extends Vue {
-
-  @Prop({required: true})
+  @Prop({ required: true })
   member!: TeamMemberData
 
-  @Prop({required: true})
+  @Prop({ required: true })
   team?: TeamData | null
 
   get image() {
@@ -54,13 +54,13 @@ export default class TeamMemberEntry extends Vue {
   height: 0;
   border-radius: 80%;
   box-shadow: 0 0 12px -4px #000;
-  background-image: url("~/assets/img/img3dModel.png");
+  background-image: url('~/assets/img/img3dModel.png');
   background-size: cover;
   padding-bottom: 80%;
 }
 
 .team-entry .name {
-  font-size: 2vw
+  font-size: 2vw;
 }
 
 .team-entry .role {

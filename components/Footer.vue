@@ -11,7 +11,10 @@
               v-for="(entry, index) in footerData.links"
               :key="index"
               :href="entry.url"
-            ><img :src="fetchImage(entry.icon)" :alt="entry.text">{{ entry.text }}</a>
+              ><img :src="fetchImage(entry.icon)" :alt="entry.text" />{{
+                entry.text
+              }}</a
+            >
           </div>
         </div>
         <div class="col">
@@ -22,7 +25,7 @@
               :key="index"
               :href="entry.element"
             >
-              {{entry.text}}
+              {{ entry.text }}
             </a>
           </div>
         </div>
@@ -33,44 +36,41 @@
               v-for="(language, index) in footerData.languages"
               :key="index"
               :href="language.url"
-            ><img v-if="language.icon" :src="language.icon" alt=""> {{ language.name }}</a>
+              ><img v-if="language.icon" :src="language.icon" alt="" />
+              {{ language.name }}</a
+            >
           </div>
         </div>
         <div class="col">
           <div id="logo-container">
-            <img :src="fetchImage(footerData.logo)" alt="logo">
+            <img :src="fetchImage(footerData.logo)" alt="logo" />
           </div>
         </div>
       </div>
 
-      <div id="copyright">
-        Copyright © 2022 LeoIOT
-      </div>
+      <div id="copyright">Copyright © 2022 LeoIOT</div>
     </div>
   </div>
 </template>
 
 <script lang="ts">
-import {Component, Vue} from "vue-property-decorator";
-import FooterData from "~/src/typings/FooterData";
+import { Component, Vue } from 'vue-property-decorator'
+import FooterData from '~/src/typings/FooterData'
 
 @Component
 export default class Footer extends Vue {
-
   footerData: FooterData | null = null
 
   async created() {
-    this.footerData = await this.$nuxt
-      .context.$content('footer/footer-data')
-      .fetch() as any
+    this.footerData = (await this.$nuxt.context
+      .$content('footer/footer-data')
+      .fetch()) as any
   }
 
   fetchImage(path: string) {
     return require(`~/assets/${path}`)
   }
-
 }
-
 </script>
 
 <style scoped>
@@ -90,7 +90,11 @@ export default class Footer extends Vue {
   border-radius: 50px 50px 0 0;
   box-shadow: 0 0 12px -4px #000;
   background: rgb(233 78 27);
-  background: linear-gradient(90deg, rgba(233 78 27 / 100%) 0%, rgba(191 23 34 / 100%) 100%);
+  background: linear-gradient(
+    90deg,
+    rgba(233 78 27 / 100%) 0%,
+    rgba(191 23 34 / 100%) 100%
+  );
 }
 
 #footer #content {
@@ -118,7 +122,7 @@ export default class Footer extends Vue {
   flex-direction: column;
   color: white;
   line-height: 5vh;
-  font-size: 1.5vw ;
+  font-size: 1.5vw;
 }
 
 #footer #content #cols .col .col-content a {
@@ -164,5 +168,4 @@ export default class Footer extends Vue {
   color: white;
   font-size: 2vw;
 }
-
 </style>

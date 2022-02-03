@@ -11,7 +11,9 @@ body {
   overflow-x: hidden;
 }
 
-*, *::after, *::before {
+*,
+*::after,
+*::before {
   font-family: 'Dongle', sans-serif;
 }
 
