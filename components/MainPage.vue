@@ -9,6 +9,7 @@
       <div id="team" class="anchor"/><TeamSegment/>
       <div id="technology" class="anchor"/><TechnologySegment/>
       <div id="architecture" class="anchor"/><ArchitectureSegment/>
+      <div id="footer" class="anchor"/><Footer/>
     </div>
   </div>
 </template>
