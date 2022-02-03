@@ -1,11 +1,11 @@
 <template>
 <div class="technology-entry">
-  <div class="image" :style="{backgroundImage: `url('${image}')`}">
-
-  </div>
-  <div class="name">
-    {{ technology.name }}
-  </div>
+    <div class="image">
+      <img :src="image" :alt="technology.name">
+    </div>
+    <div class="name">
+      {{ technology.name }}
+    </div>
 </div>
 </template>
 
@@ -39,16 +39,29 @@ export default class TechnologyEntry extends Vue{
 <style scoped>
 
 .technology-entry {
-  width: 20%;
-  height: 100px;
+  height: 13vw;
+  width: 13vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 20px;
 }
 
 .technology-entry .image {
-  width: 100%;
-  padding-bottom: 100%;
+  width: 80%;
+  height: 80%;
   background-size: cover;
   border-radius: 100%;
   box-shadow: 0 0 12px -4px #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.technology-entry .image img {
+  width: 50%;
 }
 
 </style>
