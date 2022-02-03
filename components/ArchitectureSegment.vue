@@ -1,6 +1,6 @@
 <template>
   <div id="architecture-segment">
-    <img src="" alt="architecture">
+    <img src="~/assets/img/architecture.svg" alt="architecture">
   </div>
 </template>
 
@@ -13,6 +13,12 @@ export default {
 <style scoped>
 #architecture-segment {
   width: 100%;
-  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#architecture-segment img {
+  width: 80%;
 }
 </style>
