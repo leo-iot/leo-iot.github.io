@@ -1,0 +1,10 @@
+{
+  "model3d": {
+    "img": "img/img3dModel.png",
+    "url": "http://vm139.htl-leonding.ac.at/en/3d"
+  },
+  "dashboard": {
+    "img": "img/imgDashBoard.png",
+    "url": "http://vm139.htl-leonding.ac.at/en/dashboard"
+  }
+}

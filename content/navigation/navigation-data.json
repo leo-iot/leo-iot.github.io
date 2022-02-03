@@ -1,0 +1,29 @@
+{
+  "home": {
+    "text": "LeoIOT",
+    "img": "logo.png",
+    "element": "#home"
+  },
+  "entries": [
+    {
+      "text": "About",
+      "element": "#about"
+    },
+    {
+      "text": "Preview",
+      "element": "#preview"
+    },
+    {
+      "text": "Team",
+      "element": "#team"
+    },
+    {
+      "text": "Technology",
+      "element": "#technology"
+    },
+    {
+      "text": "Architecture",
+      "element": "#architecture"
+    }
+  ]
+}
