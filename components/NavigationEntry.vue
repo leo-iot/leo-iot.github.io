@@ -29,13 +29,14 @@ export default Vue.extend({
 
 <style scoped>
 #navigation-entry {
-  height: 100%;
+  height: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 #navigation-entry a {
+  height: 100%;
   color: black;
   text-decoration: none;
   display: flex;
@@ -44,6 +45,7 @@ export default Vue.extend({
 }
 
 #navigation-entry a img {
-  height: 6vh;
+  height: 80px;
+  aspect-ratio: 19/16;
 }
 </style>

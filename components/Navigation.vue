@@ -43,7 +43,7 @@ export default class Navigation extends Vue {
   z-index: 1;
   top: 0;
   background-color: black;
-  font-size: 2vw;
+  font-size: 30px;
 }
 
 #navigation nav {
@@ -58,8 +58,8 @@ export default class Navigation extends Vue {
 }
 
 #navigation #home-entry {
-  width: 10%;
-  height: 100%;
+  height: 100px;
+  aspect-ratio: 19/16;
   display: grid;
   align-content: center;
   justify-content: center;
@@ -93,8 +93,8 @@ export default class Navigation extends Vue {
     rgba(191 23 34 / 100%) 100%
   );
   width: 100%;
-  height: 0.5vh;
-  transform: translateY(3vh);
+  height: 6px;
+  transform: translateY(20px);
   border-radius: 30px;
   opacity: 0;
   transition: 0.3s;
@@ -102,6 +102,6 @@ export default class Navigation extends Vue {
 
 #navigation #navigation-entries .navigation-entry:hover::after {
   opacity: 1;
-  transform: translateY(2vh);
+  transform: translateY(15px);
 }
 </style>
