@@ -1,5 +1,5 @@
 {
-  "logo": "logo.png",
+  "logo": "logo.webp",
   "links": [
     {
       "text": "GitHub",
@@ -13,12 +13,12 @@
     },
     {
       "text": "3d Model",
-      "icon": "logo.png",
+      "icon": "logo.webp",
       "url": "http://vm139.htl-leonding.ac.at/3d"
     },
     {
       "text": "Dashboard",
-      "icon": "logo.png",
+      "icon": "logo.webp",
       "url": "http://vm139.htl-leonding.ac.at/dashboard"
     }
   ],

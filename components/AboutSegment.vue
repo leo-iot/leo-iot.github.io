@@ -40,7 +40,6 @@ export default class AboutSegment extends Vue {
 
 <style scoped>
 #about-segment {
-  height: 500px;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -65,8 +64,11 @@ export default class AboutSegment extends Vue {
 }
 
 #about-segment #image #image-container {
-  width: 20vw;
-  height: 20vw;
+  --logo-scale-factor: 0.7;
+  --size-value: 400px;
+
+  width: var(--size-value);
+  aspect-ratio: 1/1;
   background-color: white;
   box-shadow: 0 0 12px -4px #000;
   border-radius: 100%;
@@ -76,6 +78,35 @@ export default class AboutSegment extends Vue {
 }
 
 #about-segment #image #image-container img {
-  width: 70%;
+  width: calc(var(--logo-scale-factor) * var(--size-value));
+  aspect-ratio: 19/16;
 }
+
+@media (max-width: 1290px) {
+  #about-segment #image #image-container {
+    --resize-value: 250px;
+
+    width: var(--resize-value);
+    aspect-ratio: 1/1;
+  }
+
+  #about-segment #image #image-container img {
+    width: calc(var(--logo-scale-factor) * var(--resize-value));
+    aspect-ratio: 19/16;
+  }
+}
+</style>
+
+<style>
+#text h1 {
+  font-size: 8vw;
+  line-height: 6vw;
+  margin: 0;
+}
+
+#text p {
+  font-size: 1.8vw;
+  margin: 0;
+}
+
 </style>
