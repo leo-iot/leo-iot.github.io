@@ -49,7 +49,6 @@ export default class PreviewSegment extends Vue {
 <style scoped>
 #preview-segment {
   width: 100%;
-  height: 600px;
   display: flex;
   justify-content: space-between;
   align-items: center;

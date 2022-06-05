@@ -60,7 +60,8 @@ export default class PreviewSectionEntry extends Vue {
 }
 
 .preview .text .text-container {
-  height: 80%;
+  height: 14vw;
+  overflow-y: scroll;
 }
 
 .preview .text .button {
