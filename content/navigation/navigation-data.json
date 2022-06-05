@@ -14,10 +14,6 @@
       "element": "#preview"
     },
     {
-      "text": "Team",
-      "element": "#team"
-    },
-    {
       "text": "Technology",
       "element": "#technology"
     },
