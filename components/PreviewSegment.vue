@@ -31,18 +31,6 @@ export default class PreviewSegment extends Vue {
       .$content('preview/preview-text-dashboard')
       .fetch()
   }
-
-  get imageDashBoard() {
-    if (this.datax) {
-      return require(`~/assets/${this.datax.dashboard.img}`)
-    }
-  }
-
-  get image3dModel() {
-    if (this.datax) {
-      return require(`~/assets/${this.datax.model3d.img}`)
-    }
-  }
 }
 </script>
 
