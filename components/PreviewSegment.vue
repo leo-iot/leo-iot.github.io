@@ -58,9 +58,11 @@ export default class PreviewSegment extends Vue {
 <style>
 .text h1 {
   font-size: 3vw;
+  line-height: 1vw;
 }
 
 .text p {
-  line-height: 1.5vw;
+  line-height: 1.4vw;
+  font-size: 1.4vw;
 }
 </style>
