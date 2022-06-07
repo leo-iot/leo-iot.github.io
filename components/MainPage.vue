@@ -9,6 +9,8 @@
       <AboutSegment />
       <div id="preview" class="anchor" />
       <PreviewSegment />
+      <div id="video" class="anchor"></div>
+      <VideoSegment/>
       <div id="technology" class="anchor" />
       <TechnologySegment />
       <div id="architecture" class="anchor" />
