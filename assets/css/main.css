@@ -11,6 +11,10 @@ body {
   overflow-x: hidden;
 }
 
+#__nuxt {
+  overflow: hidden;
+}
+
 *,
 *::after,
 *::before {

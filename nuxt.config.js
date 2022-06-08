@@ -9,15 +9,15 @@ export default {
   head: {
     title: 'LeoIOT',
     htmlAttrs: {
-      lang: 'en',
+      lang: 'en'
     },
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: '' },
-      { name: 'format-detection', content: 'telephone=no' },
+      { name: 'format-detection', content: 'telephone=no' }
     ],
-    link: [{ rel: 'icon', type: 'image/logo.png', href: '/logo.png' }],
+    link: [{ rel: 'icon', type: 'image/logo.png', href: '/logo.png' }]
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
@@ -34,13 +34,13 @@ export default {
     // https://go.nuxtjs.dev/typescript
     '@nuxt/typescript-build',
     // https://go.nuxtjs.dev/stylelint
-    '@nuxtjs/stylelint-module',
+    '@nuxtjs/stylelint-module'
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     // https://go.nuxtjs.dev/content
-    '@nuxt/content',
+    '@nuxt/content'
   ],
 
   // Content module configuration: https://go.nuxtjs.dev/config-content
@@ -48,10 +48,10 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
-    extend(_1, _2) {},
+    extend(_1, _2) {}
   },
 
   typescript: {
-    strict: true,
-  },
+    strict: true
+  }
 }
