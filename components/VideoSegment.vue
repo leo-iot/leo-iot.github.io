@@ -5,9 +5,9 @@
       <iframe
         width="1120"
         height="660"
+        loading="lazy"
         :src="videoData.url"
         title="LeoIOT Vidoe"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowfullscreen>
       </iframe>
     </div>
