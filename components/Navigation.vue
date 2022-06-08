@@ -58,10 +58,11 @@ export default class Navigation extends Vue {
 }
 
 #navigation #home-entry {
+  margin-left: 10px;
   height: 100px;
   aspect-ratio: 19/16;
-  display: grid;
-  align-content: center;
+  display: flex;
+  align-items: center;
   justify-content: center;
 }
 
