@@ -11,17 +11,12 @@ body {
   overflow-x: hidden;
 }
 
+#__nuxt {
+  overflow: hidden;
+}
+
 *,
 *::after,
 *::before {
   font-family: 'Dongle', sans-serif;
-}
-
-.nuxt-content h1 {
-  font-size: 10vh;
-  margin: 0;
-}
-.nuxt-content p {
-  font-size: 1.8vw;
-  margin: 0;
 }

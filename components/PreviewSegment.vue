@@ -31,25 +31,12 @@ export default class PreviewSegment extends Vue {
       .$content('preview/preview-text-dashboard')
       .fetch()
   }
-
-  get imageDashBoard() {
-    if (this.datax) {
-      return require(`~/assets/${this.datax.dashboard.img}`)
-    }
-  }
-
-  get image3dModel() {
-    if (this.datax) {
-      return require(`~/assets/${this.datax.model3d.img}`)
-    }
-  }
 }
 </script>
 
 <style scoped>
 #preview-segment {
   width: 100%;
-  height: 600px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -59,9 +46,11 @@ export default class PreviewSegment extends Vue {
 <style>
 .text h1 {
   font-size: 3vw;
+  line-height: 1vw;
 }
 
 .text p {
-  line-height: 1.5vw;
+  line-height: 1.4vw;
+  font-size: 1.4vw;
 }
 </style>

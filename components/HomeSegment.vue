@@ -40,5 +40,7 @@ export default class HomeSegment extends Vue {
   display: flex;
   justify-content: center;
   align-items: center;
+  border-radius: 0 0 40px 40px;
+  box-shadow: 0 0 12px -4px #000;
 }
 </style>
