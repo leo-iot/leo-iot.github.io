@@ -1,6 +1,6 @@
 <template>
   <div id="navigation-entry">
-    <a :href="data.url ? data.url : data.element">
+    <a :href="data.url ? data.url : data.element" @click="notifyParent()">
       <img v-if="data.img" :src="image" alt="Logo" />
       <div v-else>{{ data.text }}</div>
     </a>
@@ -24,6 +24,11 @@ export default Vue.extend({
       return require('~/assets/' + this.data.img)
     },
   },
+  methods: {
+    notifyParent() {
+      this.$emit('activated')
+    }
+  }
 })
 </script>
 

@@ -12,7 +12,17 @@
           class="navigation-entry"
         />
       </div>
+      <burger-menu class="burger-menu" @activated="toggleDropDown()"/>
     </nav>
+    <div id="navigation-entries-drop-down" :class="dropDownExpanded ? 'drop-down-expanded' : ''">
+      <NavigationEntry
+        v-for="(navigationEntry, index) in navigationData.entries"
+        :key="index"
+        :data="navigationEntry"
+        class="navigation-entry"
+        @activated="toggleDropDown()"
+      />
+    </div>
   </div>
 </template>
 
@@ -25,6 +35,7 @@ import NavigationEntry from '~/components/NavigationEntry.vue'
 })
 export default class Navigation extends Vue {
   navigationData: NavigationData | null = null
+  dropDownExpanded: boolean = false
 
   async created() {
     const fetchReturn = await this.$nuxt.context
@@ -32,6 +43,10 @@ export default class Navigation extends Vue {
       .fetch()
 
     this.navigationData = fetchReturn as any
+  }
+
+  toggleDropDown() {
+    this.dropDownExpanded = !this.dropDownExpanded
   }
 }
 </script>
@@ -42,8 +57,8 @@ export default class Navigation extends Vue {
   position: fixed;
   z-index: 1;
   top: 0;
-  background-color: black;
   font-size: 30px;
+  isolation: isolate;
 }
 
 #navigation nav {
@@ -55,6 +70,7 @@ export default class Navigation extends Vue {
   justify-content: space-between;
   align-items: center;
   flex-direction: row;
+  z-index: 1;
 }
 
 #navigation #home-entry {
@@ -105,4 +121,45 @@ export default class Navigation extends Vue {
   opacity: 1;
   transform: translateY(15px);
 }
+
+.burger-menu {
+  display: none;
+  width: 60px;
+  height: 60%;
+}
+
+#navigation-entries-drop-down {
+  display: none;
+  position: relative;
+  width: 100%;
+  transform: translateY(-500px);
+  opacity: 0;
+  background-color: white;
+  box-shadow: 0 0 12px -4px #000;
+  z-index: -1;
+  transition: all 0.5s;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.drop-down-expanded {
+  transform: translateY(0) !important;
+  opacity: 1 !important;
+}
+
+@media (max-width: 812px) {
+  #navigation #navigation-entries {
+    display: none;
+  }
+
+  .burger-menu {
+    display: flex;
+  }
+
+  #navigation-entries-drop-down {
+    display: flex;
+  }
+}
+
 </style>
