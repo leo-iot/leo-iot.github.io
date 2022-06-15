@@ -95,6 +95,16 @@ export default class AboutSegment extends Vue {
     aspect-ratio: 19/16;
   }
 }
+
+@media (max-width: 812px) {
+  #about-segment #image {
+    display: none;
+  }
+
+  #about-segment #text {
+    width: 100%;
+  }
+}
 </style>
 
 <style>

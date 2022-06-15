@@ -40,6 +40,17 @@ export default class PreviewSegment extends Vue {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 20px;
+}
+
+@media (max-width: 812px) {
+  #preview-segment {
+    flex-direction: column;
+  }
+
+  #preview-segment > * {
+    width: 100%;
+  }
 }
 </style>
 
