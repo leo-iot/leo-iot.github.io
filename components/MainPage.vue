@@ -10,7 +10,7 @@
       <div id="preview" class="anchor" />
       <PreviewSegment />
       <div id="video" class="anchor"></div>
-      <VideoSegment/>
+      <VideoSegment />
       <div id="technology" class="anchor" />
       <TechnologySegment />
       <div id="architecture" class="anchor" />
@@ -30,7 +30,7 @@ import PreviewSegment from '~/components/PreviewSegment.vue'
 import TeamSegment from '~/components/TeamSegment.vue'
 import TechnologySegment from '~/components/TechnologySegment.vue'
 import ArchitectureSegment from '~/components/ArchitectureSegment.vue'
-import VideoSegment from "~/components/VideoSegment.vue";
+import VideoSegment from '~/components/VideoSegment.vue'
 
 @Component({
   components: {
@@ -40,7 +40,7 @@ import VideoSegment from "~/components/VideoSegment.vue";
     TeamSegment,
     TechnologySegment,
     ArchitectureSegment,
-    VideoSegment
+    VideoSegment,
   },
 })
 export default class MainPage extends Vue {}

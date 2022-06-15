@@ -12,9 +12,12 @@
           class="navigation-entry"
         />
       </div>
-      <burger-menu class="burger-menu" @activated="toggleDropDown()"/>
+      <burger-menu class="burger-menu" @activated="toggleDropDown()" />
     </nav>
-    <div id="navigation-entries-drop-down" :class="dropDownExpanded ? 'drop-down-expanded' : ''">
+    <div
+      id="navigation-entries-drop-down"
+      :class="dropDownExpanded ? 'drop-down-expanded' : ''"
+    >
       <NavigationEntry
         v-for="(navigationEntry, index) in navigationData.entries"
         :key="index"
@@ -161,5 +164,4 @@ export default class Navigation extends Vue {
     display: flex;
   }
 }
-
 </style>

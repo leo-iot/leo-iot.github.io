@@ -27,8 +27,8 @@ export default Vue.extend({
   methods: {
     notifyParent() {
       this.$emit('activated')
-    }
-  }
+    },
+  },
 })
 </script>
 

@@ -118,5 +118,4 @@ export default class AboutSegment extends Vue {
   font-size: 1.8vw;
   margin: 0;
 }
-
 </style>

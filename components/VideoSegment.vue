@@ -1,22 +1,23 @@
 <template>
   <div id="video-segment">
     <div id="background"></div>
-    <div v-if="videoData" id="content" >
+    <div v-if="videoData" id="content">
       <iframe
         width="1120"
         height="660"
         loading="lazy"
         :src="videoData.url"
         title="LeoIOT Vidoe"
-        allowfullscreen>
+        allowfullscreen
+      >
       </iframe>
     </div>
   </div>
 </template>
 
 <script lang="ts">
-import {Component, Vue} from "vue-property-decorator";
-import VideoData from "@/src/typings/VideoData";
+import { Component, Vue } from 'vue-property-decorator'
+import VideoData from '@/src/typings/VideoData'
 
 @Component
 export default class VideoSegment extends Vue {
@@ -31,8 +32,6 @@ export default class VideoSegment extends Vue {
 </script>
 
 <style scoped>
-
-
 #video-segment {
   position: relative;
   width: 100%;
@@ -67,5 +66,4 @@ export default class VideoSegment extends Vue {
   align-items: center;
   margin: 100px 0;
 }
-
 </style>

@@ -1,27 +1,24 @@
 <template>
-<div class="container" @click="notifyParent()">
-  <div class="line"></div>
-  <div class="line"></div>
-  <div class="line"></div>
-</div>
+  <div class="container" @click="notifyParent()">
+    <div class="line"></div>
+    <div class="line"></div>
+    <div class="line"></div>
+  </div>
 </template>
 
 <script lang="ts">
-
-import {defineComponent} from "@vue/runtime-dom";
+import { defineComponent } from '@vue/runtime-dom'
 
 export default defineComponent({
   methods: {
     notifyParent() {
       this.$emit('activated')
-    }
-  }
+    },
+  },
 })
-
 </script>
 
 <style scoped>
-
 .container {
   display: flex;
   justify-content: space-evenly;
@@ -36,5 +33,4 @@ export default defineComponent({
   background-color: black;
   border-radius: 20px;
 }
-
 </style>
