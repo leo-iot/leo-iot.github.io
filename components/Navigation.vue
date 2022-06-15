@@ -126,7 +126,7 @@ export default class Navigation extends Vue {
 }
 
 .burger-menu {
-  display: none;
+  display: none !important;
   width: 60px;
   height: 60%;
 }
@@ -157,7 +157,7 @@ export default class Navigation extends Vue {
   }
 
   .burger-menu {
-    display: flex;
+    display: flex !important;
   }
 
   #navigation-entries-drop-down {
