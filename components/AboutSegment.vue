@@ -109,13 +109,15 @@ export default class AboutSegment extends Vue {
 
 <style>
 #text h1 {
-  font-size: 8vw;
-  line-height: 6vw;
+  font-size: 100px;
+  line-height: 100px;
   margin: 0;
 }
 
 #text p {
-  font-size: 1.8vw;
+  font-size: 50px;
+  line-height: 50px;
+  font-weight: 0;
   margin: 0;
 }
 </style>
