@@ -66,4 +66,10 @@ export default class MainPage extends Vue {}
   height: 100px;
   width: 100vw;
 }
+
+@media (max-width: 812px) {
+  #wrapper {
+    width: 90vw;
+  }
+}
 </style>
