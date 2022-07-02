@@ -36,16 +36,14 @@ export default class PreviewSegment extends Vue {
 
 <style scoped>
 #preview-segment {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: 20px;
 }
 
-@media (max-width: 812px) {
+@media (max-width: 1400px) {
   #preview-segment {
-    flex-direction: column;
+    grid-template-columns: 1fr;
   }
 
   #preview-segment > * {
@@ -55,13 +53,17 @@ export default class PreviewSegment extends Vue {
 </style>
 
 <style>
+.text {
+  --font-size: 30px;
+}
+
 .text h1 {
-  font-size: 3vw;
-  line-height: 1vw;
+  font-size: calc(var(--font-size) * 2);
+  line-height: calc(var(--font-size) * 2);
 }
 
 .text p {
-  line-height: 1.4vw;
-  font-size: 1.4vw;
+  font-size: var(--font-size);
+  line-height: var(--font-size);
 }
 </style>

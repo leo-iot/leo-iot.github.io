@@ -4,7 +4,9 @@
       <div class="text-container">
         <nuxt-content :document="text" />
       </div>
-      <a :href="data.url" class="button"> Try it out ! </a>
+      <div class="button-container">
+        <a :href="data.url" class="button"> Try it out ! </a>
+      </div>
     </div>
 
     <div class="image" :style="{ backgroundImage: `url('${image}')` }"></div>
@@ -35,13 +37,11 @@ export default class PreviewSectionEntry extends Vue {
 
 <style scoped>
 .preview {
-  width: 48%;
-  height: 90%;
   background-color: white;
   box-shadow: 0 0 12px -4px #000;
   border-radius: 20px;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 50% 50%;
   overflow: hidden;
 }
 
@@ -52,23 +52,29 @@ export default class PreviewSectionEntry extends Vue {
 }
 
 .preview .text {
-  padding: 2vw;
+  padding: 40px;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   flex-direction: column;
 }
 
 .preview .text .text-container {
-  height: 14vw;
-  overflow-y: scroll;
+  height: auto;
+}
+
+.preview .text .button-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .preview .text .button {
-  margin: 1vw 0;
+  margin: 10px;
   position: relative;
-  font-size: 3vw;
-  padding: 0.5vw;
+  font-size: 40px;
+  padding: 10px;
   border-radius: 7px;
   line-height: 3vw;
   display: flex;
@@ -97,5 +103,37 @@ export default class PreviewSectionEntry extends Vue {
     rgba(233 78 27 / 100%) 0%,
     rgba(191 23 34 / 100%) 100%
   );
+}
+
+@media (max-width: 812px) {
+  .preview .text .button {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 578px) {
+  .text {
+    --font-size: 20px;
+  }
+
+  .preview .text {
+    padding: 0;
+  }
+
+  .preview .text .text-container {
+    padding: 10px;
+  }
+
+  .preview .text .button {
+    margin: 0;
+    width: 100%;
+    border-radius: 0;
+    font-size: 20px;
+    padding: 20px;
+  }
+
+  .preview .text .button:hover {
+    transform: none;
+  }
 }
 </style>
